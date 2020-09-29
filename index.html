@@ -13078,7 +13078,15 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Milestone-1">Milestone 1<a class="anchor-link" href="#Milestone-1">&#182;</a></h1><p> Mark Lisi<br>
-Sarper Tutuncuoglu </p><hr>
+Sarper Tutuncuoglu </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="marklisi1.github.io">GitHub.io Link</a></p>
+<hr>
 
 </div>
 </div>
@@ -13094,14 +13102,14 @@ Sarper Tutuncuoglu </p><hr>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The first dataset we have found describes hiring data for city jobs in New Orleans. We took this dataset from data.nola.gov. The dataset contains information about the job title/department, as well as the term length of the hire. One of the trends that we hope to further explore is a relationship between hire length and type of job. We believe that probationary hires may be unfairly exploited based on the easily terminable nature of their hiring terms.</p>
+<p>The first dataset we have found describes <a href="https://data.nola.gov/City-Administration/City-Jobs-Hiring-Data/wx2k-rsac/data">hiring data for city jobs in New Orleans.</a> We took this dataset from data.nola.gov. The dataset contains information about the job title/department, as well as the term length of the hire. One of the trends that we hope to further explore is a relationship between hire length and type of job. We believe that probationary hires may be unfairly exploited based on the easily terminable nature of their hiring terms.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13120,7 +13128,7 @@ Sarper Tutuncuoglu </p><hr>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13223,7 +13231,78 @@ Sarper Tutuncuoglu </p><hr>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This dataset has a few limitations. Firstly, it is not very large - if we hope to draw any widely applicable conclusions, we will need to find a bigger source of data. However, we believe that the trends which emerge in this dataset will help point us in the right direction for the rest of our project. Additionally, it lacks some demographic statistics that might generate more powerful conclusions - the pay of each job, the race and gender of the applicant, etc.</p>
+<p>Luckily, most of the data on data.nola.gov is already tidy. We can also observe that our only numerical variable, Start_Date, has a value in every entry.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hiring_df</span><span class="p">[</span><span class="n">hiring_df</span><span class="p">[</span><span class="s2">&quot;Start_Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Start_Date</th>
+      <th>Job_Title</th>
+      <th>Department</th>
+      <th>Department_Code</th>
+      <th>Job_Term</th>
+      <th>List_Type</th>
+      <th>Req_Number</th>
+      <th>Appointment_Type</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Because of this, we do not need to worry about NaNs. However, this dataset does have a few limitations. Firstly, it is not very large - if we hope to draw any widely applicable conclusions, we will need to find a bigger source of data. However, we believe that the trends which emerge in this dataset will help point us in the right direction for the rest of our project. Additionally, it lacks some demographic statistics that might generate more powerful conclusions - the pay of each job, the race and gender of the applicant, etc. We hope to gain insight on these topics by crossreferencing this dataset with others - potentially IRS/FRED data.</p>
 
 </div>
 </div>
@@ -13231,14 +13310,14 @@ Sarper Tutuncuoglu </p><hr>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Another dataset we are considering working with is city job applications.</p>
+<p>Another dataset we are considering working with is <a href="https://data.nola.gov/City-Administration/City-Job-Applications-Submitted/ewwx-j8eu/data">city job applications.</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">application_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/City_Job_Applications_Submitted.csv&quot;</span><span class="p">)</span>
@@ -13255,7 +13334,7 @@ Sarper Tutuncuoglu </p><hr>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
