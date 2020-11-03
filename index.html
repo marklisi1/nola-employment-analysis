@@ -13108,12 +13108,26 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">string</span>
+</pre></div>
 
-<span class="n">hiring_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/City_Jobs_Hiring_Data.csv&quot;</span><span class="p">)</span>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hiring_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/City_Jobs_Hiring_Data.csv&quot;</span><span class="p">)</span>
 <span class="n">hiring_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13127,7 +13141,7 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13237,7 +13251,7 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hiring_df</span><span class="p">[</span><span class="n">hiring_df</span><span class="p">[</span><span class="s2">&quot;Start_Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
@@ -13253,7 +13267,7 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13316,7 +13330,7 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">application_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/City_Job_Applications_Submitted.csv&quot;</span><span class="p">)</span>
@@ -13333,7 +13347,7 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13423,7 +13437,7 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">req_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/City_Jobs_Requisition_Requests.csv&quot;</span><span class="p">)</span>
@@ -13440,7 +13454,7 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13556,7 +13570,7 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">req_df</span><span class="p">[</span><span class="s1">&#39;Req_Status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">()</span>
@@ -13572,13 +13586,13 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11dd0bc1d90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f635775ea30&gt;</pre>
 </div>
 
 </div>
@@ -13612,7 +13626,7 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">req_df</span><span class="p">[</span><span class="s2">&quot;Req_Status_Num&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">req_df</span><span class="p">[</span><span class="s2">&quot;Req_Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span>
@@ -13637,7 +13651,7 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13662,7 +13676,7 @@ Sarper Tutuncuoglu </p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">req_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Department&#39;</span><span class="p">])[</span><span class="s2">&quot;Req_Status_Num&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -13678,7 +13692,7 @@ Sarper Tutuncuoglu </p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13719,6 +13733,709 @@ NOPD                                              0.423077
 New Orleans Aviation Board                        0.422535
 Sewerage and Water Board of New Orleans           0.294268
 Name: Req_Status_Num, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="New-Orleans-City-Jobs-Pay-Plan">New Orleans City Jobs Pay Plan<a class="anchor-link" href="#New-Orleans-City-Jobs-Pay-Plan">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p> The following code is to scrape the data in this PDF document which was retreived through the New Orleans city website. <a href="./data/nola_city_jobs_pay_plan.pdf"> New Orleans City Jobs Pay Plan</a> </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p> The PDF was first converted into a text file using this tool: <a href="https://www.pdf2go.com/pdf-to-text"> PDF Converter</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/nola_city_jobs_pay_plan_edited_pay_grade_table.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> 
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span>
+
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1">#remove empty lines</span>
+
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#some numbers have spaces in between them, remove those spaces</span>
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#remove all the decimal point dots to make all numbers consistent (all numbers in the PDF have 2 decimal points, so it can be fixed later)</span>
+
+<span class="n">raw_numbers</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1">#every line as an element in a list</span>
+
+<span class="n">raw_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">element</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">raw_numbers</span> <span class="k">if</span> <span class="n">element</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()]</span> <span class="c1">#remove titles/headers</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+    
+<span class="n">first_page_length</span> <span class="o">=</span> <span class="mi">85</span> <span class="o">-</span> <span class="mi">34</span> <span class="o">+</span> <span class="mi">1</span>    
+<span class="n">second_page_length</span> <span class="o">=</span> <span class="mi">135</span> <span class="o">-</span> <span class="mi">86</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">raw_numbers</span><span class="p">):</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Pay Grade&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">entry</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 1&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 2&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 3&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 4&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 5&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 11&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 21&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;Step 41&#39;</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Pay Grade&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">entry</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">6</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 11&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">8</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 21&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="o">*</span><span class="n">first_page_length</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">second_page_length</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Step 41&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+    
+<span class="n">length</span> <span class="o">=</span> <span class="mi">135</span> <span class="o">-</span> <span class="mi">34</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="o">!=</span> <span class="n">length</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LENGTHS DON&#39;T MATCH&quot;</span><span class="p">)</span>
+        
+<span class="c1">#LENGTHS MATCH!</span>
+
+<span class="c1">#add decimal points to pay data and convert to float</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">elem</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">elem</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]]</span> <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;Pay Grade&#39;</span> <span class="k">else</span> <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pay_grades_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">pay_grades_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pay Grade</th>
+      <th>Step 1</th>
+      <th>Step 2</th>
+      <th>Step 3</th>
+      <th>Step 4</th>
+      <th>Step 5</th>
+      <th>Step 11</th>
+      <th>Step 21</th>
+      <th>Step 41</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>34</td>
+      <td>15909.85</td>
+      <td>16108.73</td>
+      <td>16310.09</td>
+      <td>16513.96</td>
+      <td>16720.39</td>
+      <td>18014.26</td>
+      <td>20397.03</td>
+      <td>26149.75</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>16310.09</td>
+      <td>16513.96</td>
+      <td>16720.39</td>
+      <td>16929.39</td>
+      <td>17141.01</td>
+      <td>18467.44</td>
+      <td>20910.14</td>
+      <td>26807.58</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>36</td>
+      <td>16720.39</td>
+      <td>16929.39</td>
+      <td>17141.01</td>
+      <td>17355.27</td>
+      <td>17572.21</td>
+      <td>18932.01</td>
+      <td>21436.16</td>
+      <td>27481.95</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>37</td>
+      <td>17141.01</td>
+      <td>17355.27</td>
+      <td>17572.21</td>
+      <td>17791.87</td>
+      <td>18014.26</td>
+      <td>19408.26</td>
+      <td>21975.41</td>
+      <td>28173.30</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>38</td>
+      <td>17572.21</td>
+      <td>17791.87</td>
+      <td>18014.26</td>
+      <td>18239.44</td>
+      <td>18467.44</td>
+      <td>19896.50</td>
+      <td>22528.23</td>
+      <td>28882.03</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This data shows the:</p>
+<ul>
+    <li>minimum (Step 1)</li>
+    <li>2nd quartile (Step 11)</li>
+    <li>midpoint (Step 21)</li>
+    <li>maximum (Step 41)</li>
+</ul><p>salaries for the corresponding pay grades</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This <a href="https://www.utdallas.edu/hr/compensation/standards/#:~:text=Second%20Quartile%3A%20The%20second%20quartile,experienced%20employee%20at%20that%20level."> UT Dallas </a> source helps us understand how salary quartiles work:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./src/salary_ranges_and_quartiles.png"/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following code is to scrape the rows that map city positions to min and max pay ranges in the <a href="./data/nola_city_jobs_pay_plan.pdf">PDF</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/nola_city_jobs_pay_plan_edited_positions_to_pay.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> 
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span>
+
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\x0c</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#remove the weirdly encoded characters</span>
+<span class="n">raw_str</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1">#remove empty rows</span>
+
+<span class="c1">#characters to filter in</span>
+<span class="n">characters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
+
+<span class="c1">#filter out all the characters that are not in the &#39;characters&#39; list</span>
+<span class="n">raw_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">character</span> <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">raw_str</span> <span class="k">if</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">characters</span><span class="p">])</span>
+
+<span class="n">rows</span> <span class="o">=</span> <span class="n">raw_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">rows</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">cleaned_row</span>  <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">elements</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">element</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">elements</span> <span class="k">if</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+    <span class="c1">#print(elements)</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="k">continue</span>
+    
+    
+    
+    
+    <span class="n">elem</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">elem</span> <span class="o">==</span> <span class="s1">&#39;EX&#39;</span><span class="p">:</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;EX&#39;</span><span class="p">)</span>
+        <span class="n">elem</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">elem</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()):</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+        
+    <span class="k">if</span> <span class="n">cleaned_row</span> <span class="o">==</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]:</span> <span class="k">continue</span>
+    
+    
+    
+    <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    
+    <span class="n">elem</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">elem</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="ow">or</span> <span class="n">elem</span> <span class="o">==</span> <span class="s1">&#39;311&#39;</span> <span class="ow">or</span> <span class="n">elem</span> <span class="o">==</span> <span class="s1">&#39;911&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">elem</span> <span class="o">==</span><span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+        <span class="n">position</span> <span class="o">+=</span> <span class="n">elem</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
+        <span class="n">elem</span> <span class="o">=</span> <span class="n">elements</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    
+    <span class="k">if</span> <span class="n">elem</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">elem</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cleaned_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+    
+    <span class="n">cleaned_row</span> <span class="o">+=</span> <span class="n">elements</span>
+        
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cleaned_row</span><span class="p">)</span>
+        
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    
+    <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="n">row</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">positions_to_pay_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+    <span class="s1">&#39;EAP&#39;</span><span class="p">,</span> <span class="s1">&#39;OC&#39;</span><span class="p">,</span> <span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Position Class&#39;</span><span class="p">,</span> <span class="s1">&#39;EQP&#39;</span><span class="p">,</span> <span class="s1">&#39;Grade&#39;</span><span class="p">,</span> <span class="s1">&#39;Min&#39;</span><span class="p">,</span> <span class="s1">&#39;Max&#39;</span><span class="p">,</span> <span class="s1">&#39;Step&#39;</span><span class="p">,</span> <span class="s1">&#39;Rate&#39;</span>
+<span class="p">])</span>
+<span class="n">positions_to_pay_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[103]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EAP</th>
+      <th>OC</th>
+      <th>Code</th>
+      <th>Position Class</th>
+      <th>EQP</th>
+      <th>Grade</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Step</th>
+      <th>Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>C7401</td>
+      <td>311 TELECOMMUNICATIONS OPERATOR</td>
+      <td>False</td>
+      <td>50</td>
+      <td>23675.0</td>
+      <td>38914.0</td>
+      <td>09</td>
+      <td>26149.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>C7406</td>
+      <td>311 TELECOMMUNICATIONS OPERATOR, DIVISION MANAGER</td>
+      <td>False</td>
+      <td>1</td>
+      <td>39893.0</td>
+      <td>65569.0</td>
+      <td>09</td>
+      <td>44061.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>C7405</td>
+      <td>311 TELECOMMUNICATIONS OPERATOR, PRINCIPAL</td>
+      <td>False</td>
+      <td>61</td>
+      <td>31117.0</td>
+      <td>51144.0</td>
+      <td>09</td>
+      <td>34368.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>C7402</td>
+      <td>311 TELECOMMUNICATIONS OPERATOR, SENIOR</td>
+      <td>False</td>
+      <td>56</td>
+      <td>27481.0</td>
+      <td>45169.0</td>
+      <td>09</td>
+      <td>30353.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>C7403</td>
+      <td>311 TELECOMMUNICATIONS OPERATOR, SUPERVISOR</td>
+      <td>False</td>
+      <td>67</td>
+      <td>36119.0</td>
+      <td>59366.0</td>
+      <td>09</td>
+      <td>39893.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+    <li><strong>EAP</strong>: "EX" to indicate which classifications are exempt from the FLSA regulations on overtime</li>
+    <li><strong>OC</strong>:  Occupational code as defined by the Federal Equal Employment Opportunity Commission</li>
+    <li><strong>Code</strong>: Code for position class</li>
+    <li><strong>Position Class</strong>: Description of job title</li>
+    <li><strong>EQP</strong>:  Indicates positions where employees have been hired at a rate above the base rate</li>
+    <li><strong>Grade</strong>: Pay grade (the corresponding pay grade in the <strong>pay_grades_df</strong> table)</li>
+    <li><strong>Min</strong>: Minimum salary for position</li>
+    <li><strong>Max</strong>: Maximum salary for position</li>
+    <li><strong>Step</strong>: Pay grade step (the corresponding step in the <strong>pay_grades_df</strong> table)</li>
+    <li><strong>Rate</strong>: Hiring rate (salary to which an employee is assigned upon entering the job)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">positions_to_pay_df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[104]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>EAP                object
+OC                 object
+Code               object
+Position Class     object
+EQP                  bool
+Grade              object
+Min               float64
+Max               float64
+Step               object
+Rate              float64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The histogram below shows the distribution of the hiring rates of city jobs. Hiring rate is the rate at which an employee is first hired for the position). We can see that it's highly skewed to the right, which is expected.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">positions_to_pay_df</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="s1">&#39;Rate&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[105]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f634f010c40&gt;]],
+      dtype=object)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAEICAYAAACktLTqAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAVtUlEQVR4nO3dfZBd9X3f8fe3Ukxk1hVg4a0iSBZaTAuowdEOqevWs2vHNjauMZ3GRUNdZJPIntptmqjTiDhjO/XQwTaKPRnaYLlQcCEsBIztQmyH0NxgOsG2lGIkDNgCrR0Blniy4CoaT1Z8+8c9Gl2td9ndc592f3q/Zu7sub/z9Lkr7WfPnnvuvZGZSJLK8ncGHUCS1H2WuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgSx3SSqQ5a5jSkRMRsTBiGhGxI8i4vqIGJrHehsi4r5+ZJS6wXLXsehfZOYQcC7wOuDyAeeRus5y1zErM38EfJ1WyRMRmyPisYh4MSK+GxEXVeP/CLgGeH11xP/javy4iLgqIn4YEXsj4pqIWDGoxyO1s9x1zIqIU4C3A7uqoceAfw6sBH4PuDEiVmfmw8AHgb/MzKHMPKFa/pPAa2n9cvgHwBrgo318CNKsLHcdi74UES8Cfw3sAz4GkJl/nJlPZuZLmXkL8H3gvJk2EBEB/Drwm5n5XGa+CPxX4OK+PAJpDpa7jkXvzsxXAWPAPwRWAUTEv42IByLix9Wpl3MOz5vBycArge1ty3+tGpcGznLXMSsz/wK4HrgqIn4B+DzwYeDV1amXnUAcXnza6s8AB4GzM/OE6rayeqJWGjjLXce6zwJvoXW+PIGnASLifbSO3A/bC5wSEa8AyMyXaP0y+ExEvKZaZ01EvK2P2aVZWe46pmXm08AXgE3AFuAvaRX5WuD/ti36f4CHgB9FxDPV2G/TejL2/oh4Afgz4Mw+RZdeVvhhHZJUHo/cJalAlrskFchyl6QCWe6SVKDlgw4AsGrVqhwZGam17oEDBzj++OO7G6gPzN1f5u4vc/fH9u3bn8nMGV84tyjKfWRkhG3bttVat9FoMDY21t1AfWDu/jJ3f5m7PyLiB7PN87SMJBXIcpekAlnuklQgy12SCmS5S1KBLHdJKpDlLkkFmrPcI+K6iNgXETvbxm6pPrHmgYiYjIgHqvGRiDjYNu+aXoaXJM1sPi9iuh64mtZ7XgOQmf/68HREbAH2ty3/WGae262AkqSFm7PcM/PeiBiZaV71IcHvAd7U3VhLw8jmu2qvu2ntFBtqrj955QW19yvp2DCvD+uoyv3OzDxn2vgbgd/PzNG25R4Cvge8APxuZn5jlm1uBDYCDA8Pr5uYmKj1AJrNJkNDg/nYyh1P7J97oVkMr4C9B+utu3bNytr77dQgv9+dMHd/mbs/xsfHtx/u3+k6fW+Z9cDNbfefAn4+M5+NiHXAlyLi7Mx8YfqKmbkV2AowOjqadd/PYZDvBVH3yBtaR+5bdtT79k9eMlZ7v51aau+9cZi5+8vcg1f7apmIWA78S+CWw2OZ+ZPMfLaa3g48Bry205CSpIXp5FLIXwEeycw9hwci4uSIWFZNnw6cATzeWURJ0kLN51LIm2l9IvyZEbEnIi6rZl3M0adkAN4IPBgR3wFuAz6Ymc91M7AkaW7zuVpm/SzjG2YYux24vfNYkqRO+ApVSSqQ5S5JBbLcJalAlrskFchyl6QCWe6SVCDLXZIKZLlLUoEsd0kqkOUuSQWy3CWpQJa7JBXIcpekAlnuklQgy12SCmS5S1KBLHdJKpDlLkkFstwlqUCWuyQVaM5yj4jrImJfROxsG/t4RDwREQ9Ut3e0zbs8InZFxKMR8bZeBZckzW75PJa5Hrga+MK08c9k5lXtAxFxFnAxcDbwc8CfRcRrM/NQF7LOamTzXb3cvCQtOXMeuWfmvcBz89zehcBEZv4kM3cDu4DzOsgnSaohMnPuhSJGgDsz85zq/seBDcALwDZgU2Y+HxFXA/dn5o3VctcCX83M22bY5kZgI8Dw8PC6iYmJWg+g2Wyye39P/zDoieEVsPdgvXXXrlnZ3TAL0Gw2GRoaGtj+6zJ3f5m7P8bHx7dn5uhM8+ZzWmYmfwh8Asjq6xbg/UDMsOyMvz0ycyuwFWB0dDTHxsZqBWk0Gmy570CtdQdp09optuyo9+2fvGSsu2EWoNFoUPffapDM3V/mHrxaV8tk5t7MPJSZLwGf58iplz3AqW2LngI82VlESdJC1Sr3iFjddvci4PCVNF8BLo6I4yLiNOAM4FudRZQkLdSc5wUi4mZgDFgVEXuAjwFjEXEurVMuk8AHADLzoYi4FfguMAV8qNdXykiSftqc5Z6Z62cYvvZllr8CuKKTUJKkzvgKVUkqkOUuSQWy3CWpQJa7JBXIcpekAlnuklQgy12SCmS5S1KBLHdJKpDlLkkFstwlqUCWuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgSx3SSqQ5S5JBbLcJalAlrskFchyl6QCzVnuEXFdROyLiJ1tY5+OiEci4sGIuCMiTqjGRyLiYEQ8UN2u6WV4SdLM5nPkfj1w/rSxu4FzMvMfA98DLm+b91hmnlvdPtidmJKkhZiz3DPzXuC5aWN/mplT1d37gVN6kE2SVFNk5twLRYwAd2bmOTPM+9/ALZl5Y7XcQ7SO5l8AfjczvzHLNjcCGwGGh4fXTUxM1HoAzWaT3fsP1Vp3kIZXwN6D9dZdu2Zld8MsQLPZZGhoaGD7r8vc/WXu/hgfH9+emaMzzVveyYYj4iPAFHBTNfQU8POZ+WxErAO+FBFnZ+YL09fNzK3AVoDR0dEcGxurlaHRaLDlvgO11h2kTWun2LKj3rd/8pKx7oZZgEajQd1/q0Eyd3+Ze/BqXy0TEZcC7wQuyerwPzN/kpnPVtPbgceA13YjqCRp/mqVe0ScD/w28K7M/Ju28ZMjYlk1fTpwBvB4N4JKkuZvzvMCEXEzMAasiog9wMdoXR1zHHB3RADcX10Z80bgv0TEFHAI+GBmPjfjhiVJPTNnuWfm+hmGr51l2duB2zsNJUnqjK9QlaQCWe6SVCDLXZIKZLlLUoEsd0kqkOUuSQWy3CWpQJa7JBXIcpekAlnuklQgy12SCmS5S1KBLHdJKpDlLkkFstwlqUCWuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgeb8gOyIuA54J7AvM8+pxk4CbgFGgEngPZn5fDXvcuAy4BDwHzLz6z1Jfgwb2XzXwPZ9/fnHD2zfkuZvPkfu1wPnTxvbDNyTmWcA91T3iYizgIuBs6t1/ntELOtaWknSvMxZ7pl5L/DctOELgRuq6RuAd7eNT2TmTzJzN7ALOK9LWSVJ8xSZOfdCESPAnW2nZX6cmSe0zX8+M0+MiKuB+zPzxmr8WuCrmXnbDNvcCGwEGB4eXjcxMVHrATSbTXbvP1Rr3UEaXgF7Dw46xcKdtnIZQ0NDg46xYM1m09x9ZO7+GB8f356ZozPNm/Oc+wLFDGMz/vbIzK3AVoDR0dEcGxurtcNGo8GW+w7UWneQNq2dYsuObn/7e+/684+n7r/VIDUaDXP3kbkHr+7VMnsjYjVA9XVfNb4HOLVtuVOAJ+vHkyTVUbfcvwJcWk1fCny5bfziiDguIk4DzgC+1VlESdJCzedSyJuBMWBVROwBPgZcCdwaEZcBPwR+FSAzH4qIW4HvAlPAhzJz6Z0Ql6Qlbs5yz8z1s8x68yzLXwFc0UkoSVJnfIWqJBXIcpekAi29a/E0UDue2M+GAbz9weSVF/R9n9JS5pG7JBXIcpekAlnuklQgy12SCmS5S1KBLHdJKpDlLkkFstwlqUCWuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgSx3SSqQ5S5JBbLcJalAlrskFaj2JzFFxJnALW1DpwMfBU4Afh14uhr/ncz8k9oJJUkLVrvcM/NR4FyAiFgGPAHcAbwP+ExmXtWVhJKkBevWaZk3A49l5g+6tD1JUge6Ve4XAze33f9wRDwYEddFxIld2ockaZ4iMzvbQMQrgCeBszNzb0QMA88ACXwCWJ2Z759hvY3ARoDh4eF1ExMTtfbfbDbZvf9Q3fgDM7wC9h4cdIqFG1TutWtWdrR+s9lkaGioS2n6x9z9tdRyj4+Pb8/M0ZnmdaPcLwQ+lJlvnWHeCHBnZp7zctsYHR3Nbdu21dp/o9Fgw9cO1Fp3kDatnWLLjtpPeQzMoHJPXnlBR+s3Gg3Gxsa6E6aPzN1fSy13RMxa7t04LbOetlMyEbG6bd5FwM4u7EOStAAdHYJFxCuBtwAfaBv+VEScS+u0zOS0eZKkPuio3DPzb4BXTxt7b0eJJEkd8xWqklQgy12SCmS5S1KBLHdJKpDlLkkFstwlqUCWuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgSx3SSqQ5S5JBbLcJalAlrskFchyl6QCWe6SVCDLXZIKZLlLUoEsd0kqkOUuSQVa3snKETEJvAgcAqYyczQiTgJuAUaASeA9mfl8ZzElSQvRjSP38cw8NzNHq/ubgXsy8wzgnuq+JKmPenFa5kLghmr6BuDdPdiHJOllRGbWXzliN/A8kMDnMnNrRPw4M09oW+b5zDxxhnU3AhsBhoeH101MTNTK0Gw22b3/UK11B2l4Bew9OOgUCzeo3GvXrOxo/WazydDQUJfS9I+5+2up5R4fH9/edtbkKB2dcwfekJlPRsRrgLsj4pH5rpiZW4GtAKOjozk2NlYrQKPRYMt9B2qtO0ib1k6xZUen3/7+G1TuyUvGOlq/0WhQ9//YIJm7v5Zq7pl0dFomM5+svu4D7gDOA/ZGxGqA6uu+TkNKkhamdrlHxPER8arD08BbgZ3AV4BLq8UuBb7caUhJ0sJ08vf1MHBHRBzezh9l5tci4tvArRFxGfBD4Fc7jylJWoja5Z6ZjwO/OMP4s8CbOwklSeqMr1CVpAJZ7pJUIMtdkgpkuUtSgSx3SSqQ5S5JBbLcJalAS+/NTXRMGtl8V0frb1o7xYaa25i88oKO9i0NgkfuklQgy12SCmS5S1KBLHdJKpDlLkkFstwlqUCWuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgSx3SSpQ7XKPiFMj4s8j4uGIeCgifqMa/3hEPBERD1S3d3QvriRpPjp5V8gpYFNm/lVEvArYHhF3V/M+k5lXdR5PklRH7XLPzKeAp6rpFyPiYWBNt4JJi0Wnbzdcl281rE5EZna+kYgR4F7gHOC3gA3AC8A2Wkf3z8+wzkZgI8Dw8PC6iYmJWvtuNpvs3n+o1rqDNLwC9h4cdIqFM3f/rF2zkmazydDQ0KCjLJi5+2N8fHx7Zo7ONK/jco+IIeAvgCsy84sRMQw8AyTwCWB1Zr7/5bYxOjqa27Ztq7X/RqPBhq8dqLXuIG1aO8WWHUvvs1LM3T+TV15Ao9FgbGxs0FEWzNz9ERGzlntHV8tExM8AtwM3ZeYXATJzb2YeysyXgM8D53WyD0nSwnVytUwA1wIPZ+bvt42vblvsImBn/XiSpDo6+Tv1DcB7gR0R8UA19jvA+og4l9ZpmUngAx0llCQtWCdXy9wHxAyz/qR+HElSN/gKVUkqkOUuSQWy3CWpQJa7JBXIcpekAlnuklQgy12SCmS5S1KBLHdJKpDlLkkFWlrvgSodQ0Y238WmtVNsGMCHhfhBIUufR+6SVCDLXZIKZLlLUoEsd0kqkOUuSQWy3CWpQF4KKemnjHR4+WXdSzgHdQnm4cc7iEtPe/WYPXKXpAJZ7pJUIMtdkgrUs3KPiPMj4tGI2BURm3u1H0nST+tJuUfEMuC/AW8HzgLWR8RZvdiXJOmn9epqmfOAXZn5OEBETAAXAt/t0f4kFaDTq3R0RGRm9zca8a+A8zPz16r77wV+OTM/3LbMRmBjdfdM4NGau1sFPNNB3EExd3+Zu7/M3R+/kJknzzSjV0fuMcPYUb9FMnMrsLXjHUVsy8zRTrfTb+buL3P3l7kHr1dPqO4BTm27fwrwZI/2JUmaplfl/m3gjIg4LSJeAVwMfKVH+5IkTdOT0zKZORURHwa+DiwDrsvMh3qxL7pwamdAzN1f5u4vcw9YT55QlSQNlq9QlaQCWe6SVKCBl3tEnBoRfx4RD0fEQxHxG9X4SRFxd0R8v/p6Yts6l1dva/BoRLytbXxdROyo5v1BREQ1flxE3FKNfzMiRrqYf1lE/L+IuHOJ5T4hIm6LiEeq7/3rF3v2iPjN6v/Izoi4OSJ+drFmjojrImJfROxsG+tL1oi4tNrH9yPi0i7k/nT1/+TBiLgjIk5YCrnb5v2niMiIWLXYcvdUZg70BqwGfqmafhXwPVpvWfApYHM1vhn4ZDV9FvAd4DjgNOAxYFk171vA62ldZ/9V4O3V+L8DrqmmLwZu6WL+3wL+CLizur9Uct8A/Fo1/QrghMWcHVgD7AZWVPdvBTYs1szAG4FfAna2jfU8K3AS8Hj19cRq+sQOc78VWF5Nf3Kp5K7GT6V1YccPgFWLLXcvbwMPMMM/0peBt9B6xerqamw18Gg1fTlwedvyX6/+MVYDj7SNrwc+175MNb2c1ivQogtZTwHuAd7EkXJfCrn/Lq2ijGnjizY7rXL/6+qHaDlwJ63SWcyZRzi6JHuetX2Zat7ngPWd5J427yLgpqWSG7gN+EVgkiPlvqhy9+o28NMy7ao/dV4HfBMYzsynAKqvr6kWO/xDftieamxNNT19/Kh1MnMK2A+8uguRPwv8Z+CltrGlkPt04Gngf0brlNL/iIjjF3P2zHwCuAr4IfAUsD8z/3QxZ55BP7LOtq1ueT+tI9pFnzsi3gU8kZnfmTZrUefulkVT7hExBNwO/MfMfOHlFp1hLF9m/OXWqS0i3gnsy8zt811llgx9zV1ZTutP2D/MzNcBB2idJpjNwLNX56cvpPVn9M8Bx0fEv3m5VWbZ/yC+33PpZtaePYaI+AgwBdzUQYa+5I6IVwIfAT460+waGfr+/e7Uoij3iPgZWsV+U2Z+sRreGxGrq/mrgX3V+GxvbbCnmp4+ftQ6EbEcWAk812HsNwDviohJYAJ4U0TcuARyH97unsz8ZnX/Nlplv5iz/wqwOzOfzsy/Bb4I/NNFnnm6fmTtyVt/VE8UvhO4JKvzD4s899+ndSDwnepn9BTgryLi7y3y3N0z6PNCtH7zfQH47LTxT3P0k0+fqqbP5ugnQx7nyJMh3wb+CUeeDHlHNf4hjn4y5NYuP4YxjpxzXxK5gW8AZ1bTH69yL9rswC8DDwGvrPZ1A/DvF3nmEY4+597zrLSek9hN68m9E6vpkzrMfT6tt+s+edpyizr3tHmTHDnnvqhy9+o2+ADwz2j9GfMg8EB1ewet81n3AN+vvp7Uts5HaD3D/SjVs9nV+Ciws5p3NUdegfuzwB8Du2g9G356lx/DGEfKfUnkBs4FtlXf9y9V/zEXdXbg94BHqv39r+qHc1FmBm6m9dzA39I6urusX1lpnRffVd3e14Xcu2idVz7883nNUsg9bf4kVbkvpty9vPn2A5JUoEVxzl2S1F2WuyQVyHKXpAJZ7pJUIMtdkgpkuUtSgSx3SSrQ/weYj8lsarnl8gAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">positions_to_pay_df</span><span class="p">[[</span><span class="s1">&#39;Min&#39;</span><span class="p">,</span> <span class="s1">&#39;Max&#39;</span><span class="p">,</span> <span class="s1">&#39;Rate&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[106]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>662.000000</td>
+      <td>662.000000</td>
+      <td>614.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>45118.051360</td>
+      <td>72989.531722</td>
+      <td>51238.956026</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>20613.189732</td>
+      <td>32578.382683</td>
+      <td>22865.071056</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3232.000000</td>
+      <td>7675.000000</td>
+      <td>20397.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>30353.000000</td>
+      <td>49889.000000</td>
+      <td>34368.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>39893.000000</td>
+      <td>65569.000000</td>
+      <td>45169.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>55102.000000</td>
+      <td>90567.000000</td>
+      <td>63960.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>128242.000000</td>
+      <td>210781.000000</td>
+      <td>152602.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
